@@ -81,6 +81,45 @@ DevOps observability and metric collection
 
 Learning Prometheus and Docker fundamentals
 
+Following queries were executed:
+ go_gc_heap_allocs_by_size_bytes_sum
+Context: Go runtime (garbage collector).
+
+Meaning: Total number of bytes allocated on the Go heap, grouped by allocation size.
+
+Usage: Helps analyze memory allocation patterns and spot memory bloat or inefficiencies.
+
+2. go_gc_cycles_automatic_gc_cycles_total
+Context: Go runtime GC.
+
+Meaning: Total number of automatic garbage collection (GC) cycles that have occurred.
+
+Usage: Indicates how frequently the Go runtime is automatically triggering garbage collection. High numbers could imply a memory-intensive workload or frequent allocations.
+
+3. go_sched_latencies_seconds_count
+Context: Go scheduler.
+
+Meaning: Count of observed scheduling latencies (i.e., how long goroutines wait to be scheduled).
+
+Usage: Higher counts, especially with high latency, could signal CPU contention or goroutine scheduling issues.
+
+4. prometheus_http_request_duration_seconds_sum
+Context: Prometheus server itself.
+
+Meaning: Total time (in seconds) spent handling HTTP requests.
+
+Usage: Used in conjunction with the _count metric to compute average request duration:
+
+css
+Copy
+Edit
+rate(prometheus_http_request_duration_seconds_sum[5m]) 
+/ 
+rate(prometheus_http_request_duration_seconds_count[5m])
+This gives the average request duration over the last 5 minutes.
+
+
+
 
 ![Screenshot 2025-04-20 150617](https://github.com/user-attachments/assets/3ed92916-7114-4f19-b53b-56198aa57bff)
 ![Screenshot 2025-04-20 150440](https://github.com/user-attachments/assets/97b7dfff-469c-4189-a64d-11ecd5837c3a)

@@ -125,9 +125,8 @@ This gives the average request duration over the last 5 minutes.
 ![Screenshot 2025-04-20 150440](https://github.com/user-attachments/assets/97b7dfff-469c-4189-a64d-11ecd5837c3a)
 ![Screenshot 2025-04-20 150354](https://github.com/user-attachments/assets/7868c87a-1aae-4563-a530-ad564d889895)
 ![Screenshot 2025-04-20 150251](https://github.com/user-attachments/assets/d65808e9-1e05-4f7f-ae77-94d729341dd5)
-![Screenshot 2025-04-19 182940](https://github.com/user-attachments/assets/77435b99-cd4a-48c9-a77d-90a59dd60a44)
 
 
 
-Lightweight alternative to full observability stacks
+
 

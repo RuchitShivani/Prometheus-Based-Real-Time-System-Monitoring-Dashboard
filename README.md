@@ -4,7 +4,7 @@ This project implements a real-time system monitoring dashboard using Prometheus
 🔧 Project Overview
 Prometheus scrapes metrics from various exporters at regular intervals.
 
-These metrics are queried and visualized using Prometheus’ built-in graphing interface.
+These metrics are queried and visualized using Prometheus’ built-in graphing interfaces.
 
 The setup runs inside a Docker container, demonstrating how containerization simplifies deployment and isolation of monitoring tools.
 
